@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace sandbx
 {
-    class SandbxElement
+    public class SandbxElement
     {
         // Visual Properties
         public Microsoft.Xna.Framework.Color defaultColor { get; set; } // Color assigned to the element, but not used by it. Used for UI colors
@@ -25,6 +25,7 @@ namespace sandbx
         public float yVelocity { get; set; }
         public float friction { get; set; }
         public float bounciness { get; set; }
+        public float energyConsumption { get; set; }
 
         // Behaviour
         public ElementType elementType { get; set; }
@@ -33,10 +34,114 @@ namespace sandbx
         public SandbxElement()
         {
             bounciness = 2.0f;
-            friction = 0.5f;
+            energyConsumption = 0.2f;
+            friction = 0.2f;
             xVelocity = 0;
             yVelocity = 0;
             isFalling = true; // Default to falling behavior
+        }
+
+        public virtual SandbxElement Clone()
+        {
+            return new SandbxElement
+            {
+                baseColor = this.baseColor,
+                energyConsumption = this.energyConsumption,
+                defaultColor = this.defaultColor,
+                idName = this.idName,
+                displayName = this.displayName,
+                shortName = this.shortName,
+                name = this.name,
+                elementType = this.elementType,
+                xVelocity = this.xVelocity,
+                yVelocity = this.yVelocity,
+                friction = this.friction,
+                bounciness = this.bounciness,
+                isFalling = this.isFalling
+            };
+        }
+
+        public void RecieveVelocity(float xVel, float yVel)
+        {
+            this.xVelocity += xVel * this.energyConsumption;
+            this.yVelocity += yVel * this.energyConsumption;
+        }
+    }
+
+    public class PowderElement : SandbxElement
+    {
+        public PowderElement()
+        {
+            elementType = ElementType.Powder;
+            energyConsumption = 0.1f;
+            bounciness = 2.0f;
+            friction = 0.5f;
+            xVelocity = 0;
+            yVelocity = 0;
+            isFalling = true;
+        }
+
+        public override SandbxElement Clone()
+        {
+            return new PowderElement
+            {
+                baseColor = this.baseColor,
+                defaultColor = this.defaultColor,
+                idName = this.idName,
+                displayName = this.displayName,
+                shortName = this.shortName,
+                name = this.name,
+                elementType = this.elementType,
+                xVelocity = this.xVelocity,
+                yVelocity = this.yVelocity,
+                friction = this.friction,
+                bounciness = this.bounciness,
+                isFalling = this.isFalling,
+                energyConsumption = this.energyConsumption,
+            };
+        }
+    }
+
+    public class LiquidElement : SandbxElement
+    {
+        public float fluidFriction { get; set; }
+        public float fluidDensity { get; set; }
+        public float fluidViscosity { get; set; }
+
+        public LiquidElement()
+        {
+            elementType = ElementType.Liquid;
+            energyConsumption = 0.1f;
+            bounciness = 2.0f;
+            friction = 0.5f;
+            xVelocity = 0;
+            yVelocity = 0;
+            isFalling = true;
+        }
+
+        public override SandbxElement Clone()
+        {
+            return new LiquidElement
+            {
+                baseColor = this.baseColor,
+                defaultColor = this.defaultColor,
+                idName = this.idName,
+                displayName = this.displayName,
+                shortName = this.shortName,
+                name = this.name,
+                elementType = this.elementType,
+                xVelocity = this.xVelocity,
+                yVelocity = this.yVelocity,
+                friction = this.friction,
+                bounciness = this.bounciness,
+                isFalling = this.isFalling,
+                energyConsumption = this.energyConsumption,
+
+                //liquid-specific
+                fluidDensity = this.fluidDensity,
+                fluidFriction = this.fluidFriction,
+                fluidViscosity = this.fluidViscosity,
+            };
         }
     }
 }

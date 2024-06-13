@@ -108,11 +108,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Piotr\\Desktop\\projects\\sandbx\\sandbx\\sandbx.csproj",
+      "projectUniqueName": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj",
       "projectName": "sandbx",
-      "projectPath": "C:\\Users\\Piotr\\Desktop\\projects\\sandbx\\sandbx\\sandbx.csproj",
+      "projectPath": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj",
       "packagesPath": "C:\\Users\\Piotr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Piotr\\Desktop\\projects\\sandbx\\sandbx\\obj\\",
+      "outputPath": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
