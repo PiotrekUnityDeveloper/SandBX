@@ -152,10 +152,21 @@ namespace sandbx
 
                     bool wasFalling = element.isFalling; // Capture the current falling state
 
+                    SandbxElement elem;
                     // Check if the element will collide in the next frame or is out of bounds
-                    if (isColliding(new Point(position.X, position.Y + 1)) || IsOutOfBounds(position.X * CellSize, (position.Y + 1) * CellSize, Width, Height))
+                    if (isColliding(new Point(position.X, position.Y + 1), out elem) || IsOutOfBounds(position.X * CellSize, (position.Y + 1) * CellSize, Width, Height))
                     {
-                        element.isFalling = false;
+                        if(elem != null && elem.elementType == ElementType.Liquid)
+                        {
+                            SwapElements(position, new Point(position.X, position.Y + 1));
+                            elem.isFalling = true;
+                            elem.xVelocity = 0;
+                            elem.yVelocity = 0;
+                        }
+                        else
+                        {
+                            element.isFalling = false;
+                        }
                     }
                     else
                     {
@@ -315,13 +326,13 @@ namespace sandbx
                     bool wasFalling = element.isFalling; // Capture the current falling state
 
                     // Check if the element will collide in the next frame or is out of bounds
-                    if (isColliding(new Point(position.X, position.Y + 1)) || IsOutOfBounds(position.X * CellSize, (position.Y + 1) * CellSize, Width, Height))
+                    if (!isColliding(new Point(position.X, position.Y + 1)) && !IsOutOfBounds(position.X * CellSize, (position.Y + 1) * CellSize, Width, Height))
                     {
-                        element.isFalling = false;
+                        element.isFalling = true;
                     }
                     else
                     {
-                        element.isFalling = true;
+                        element.isFalling = false;
                     }
 
                     // Calculate new position based on velocity
