@@ -106,11 +106,13 @@ namespace sandbx
     {
         public float fluidFriction { get; set; }
         public float fluidDensity { get; set; }
+        public int fluidPouring { get; set; }
         public float fluidViscosity { get; set; }
 
         public LiquidElement()
         {
             elementType = ElementType.Liquid;
+            fluidPouring = 3;
             energyConsumption = 0.1f;
             bounciness = 2.0f;
             friction = 0.5f;
@@ -141,6 +143,7 @@ namespace sandbx
                 fluidDensity = this.fluidDensity,
                 fluidFriction = this.fluidFriction,
                 fluidViscosity = this.fluidViscosity,
+                fluidPouring = this.fluidPouring,
             };
         }
     }

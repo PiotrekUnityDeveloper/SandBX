@@ -3,23 +3,23 @@
   "WorkspaceRootPath": "C:\\Users\\Piotr\\Desktop\\SandBX\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbxelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\sandbxelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|c:\\users\\piotr\\desktop\\sandbx\\sandbx\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\game1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\sandbx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\AppData\\Local\\SourceServer\\e709ae190ba1d57dd43547b0b6335b8d3f2c23b7a5613e29e263bee6ffae3029\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\Dictionary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbxelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\sandbxelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\content\\font.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\content\\font.spritefont||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{4B79923E-570D-4019-BFFB-B0175E200494}|sandbx\\sandbx.csproj|solutionrelative:sandbx\\sandbx.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Piotr\\AppData\\Local\\SourceServer\\0addd27b3404782adb7ad249b067ddb650cc1aba3eea9db37c8feb6258339e39\\src\\libraries\\System.Private.CoreLib\\src\\System\\Threading\\Thread.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -41,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -49,7 +49,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dictionary.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\AppData\\Local\\SourceServer\\e709ae190ba1d57dd43547b0b6335b8d3f2c23b7a5613e29e263bee6ffae3029\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\Dictionary.cs",
               "RelativeDocumentMoniker": "..\\..\\AppData\\Local\\SourceServer\\e709ae190ba1d57dd43547b0b6335b8d3f2c23b7a5613e29e263bee6ffae3029\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\Dictionary.cs",
@@ -57,12 +57,11 @@
               "RelativeToolTip": "..\\..\\AppData\\Local\\SourceServer\\e709ae190ba1d57dd43547b0b6335b8d3f2c23b7a5613e29e263bee6ffae3029\\src\\libraries\\System.Private.CoreLib\\src\\System\\Collections\\Generic\\Dictionary.cs",
               "ViewState": "AQIAALQAAAAAAAAAAAAowMYAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T15:24:20.778Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-13T15:24:20.778Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "font.spritefont",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\Content\\font.spritefont",
               "RelativeDocumentMoniker": "sandbx\\Content\\font.spritefont",
@@ -122,36 +121,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "sandbx",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj",
               "RelativeDocumentMoniker": "sandbx\\sandbx.csproj",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\sandbx.csproj",
               "RelativeToolTip": "sandbx\\sandbx.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-06-12T22:18:40.557Z"
+              "WhenOpened": "2024-06-12T22:18:40.557Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "SandbxElement.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\SandbxElement.cs",
               "RelativeDocumentMoniker": "sandbx\\SandbxElement.cs",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\SandbxElement.cs",
               "RelativeToolTip": "sandbx\\SandbxElement.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAswEIAAAA8AAAA",
+              "ViewState": "AQIAAHIAAAAAAAAAAAAkwJEAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T20:27:01.503Z"
+              "WhenOpened": "2024-06-12T20:27:01.503Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game1.cs",
               "DocumentMoniker": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\Game1.cs",
               "RelativeDocumentMoniker": "sandbx\\Game1.cs",
               "ToolTip": "C:\\Users\\Piotr\\Desktop\\SandBX\\sandbx\\Game1.cs",
               "RelativeToolTip": "sandbx\\Game1.cs",
-              "ViewState": "AQIAAI8AAAAAAAAAAAAwwKMAAAAvAAAA",
+              "ViewState": "AQIAAHQBAAAAAAAAAAAowI4BAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-12T20:18:57.543Z",
               "EditorCaption": ""

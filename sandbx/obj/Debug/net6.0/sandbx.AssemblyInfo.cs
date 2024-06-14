@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("sandbx")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f887622f9af0976ec13241669548eed7d0d36c2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28ee106cd2bdca3f86718da007d43d82cd3e06fa")]
 [assembly: System.Reflection.AssemblyProductAttribute("sandbx")]
 [assembly: System.Reflection.AssemblyTitleAttribute("sandbx")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

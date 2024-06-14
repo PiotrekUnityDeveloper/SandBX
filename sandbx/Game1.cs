@@ -382,20 +382,28 @@ namespace sandbx
 
                         if (rand == 0)
                         {
-                            newHorizontalPosition = new Point(position.X - 1, position.Y);
+                            newHorizontalPosition = new Point(position.X - ((LiquidElement)element).fluidPouring, position.Y);
                         }
                         else
                         {
-                            newHorizontalPosition = new Point(position.X + 1, position.Y);
+                            newHorizontalPosition = new Point(position.X + ((LiquidElement)element).fluidPouring, position.Y);
                         }
 
                         // Ensure the new position is not out of bounds or colliding
+                        /*
                         if (!IsOutOfBounds(newHorizontalPosition.X * CellSize, newHorizontalPosition.Y * CellSize, Width, Height) &&
                             !isColliding(newHorizontalPosition))
                         {
                             MoveElement(position, newHorizontalPosition);
                         }
+                        */
+
+                        Point avaiablePosition = isCollidingInLine(position, newHorizontalPosition);
+
+                        MoveElement(position, avaiablePosition);
                     }
+
+
 
                 }
             }
