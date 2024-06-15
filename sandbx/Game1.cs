@@ -32,7 +32,7 @@ namespace sandbx
         private List<SandbxElement> availableElements = new List<SandbxElement>()
         {
             new PowderElement { baseColor = Color.Yellow, idName = "sand-powder", displayName = "Sand", },
-            new LiquidElement { baseColor = Color.DodgerBlue, idName = "water", displayName = "Water", },
+            new LiquidElement { baseColor = Color.DodgerBlue, idName = "water", displayName = "Water", fluidPouringMin = 0.75f, fluidPouringMax = 2.5f, friction = 1f, yVelocity = 2f },
             new PowderElement { baseColor = Color.DarkGray, idName = "metal-scraps", displayName = "Metal Scraps", yVelocity = 3f, powderityMin = 0.5f, powderityMax = 3f, },
         };
 

@@ -310,6 +310,59 @@ namespace sandbx
 
                 UpdateElementVelocity(position, element);
             }
+            else if(element.idName == "water")
+            {
+                float lastYvelocity = element.yVelocity;
+                bool wasFalling = element.isFalling; // Capture the current falling state
+
+                UpdateElementGravity(position, element);
+
+                int rand = random.Next(0, 2);
+
+                
+                if (!element.isFalling)
+                {
+                    //Point newHorizontalPosition;
+
+                    Point belowRight = new Point(position.X + 1, position.Y + 1);
+                    Point belowLeft = new Point(position.X - 1, position.Y + 1);
+
+                    if (!Utilities.Simulation.IsPositionOccupied(belowRight))
+                    {
+                        element.xVelocity = Math.Clamp(element.xVelocity + 0.6f, 0f, 1f);
+                    }
+                    else if (!Utilities.Simulation.IsPositionOccupied(belowLeft))
+                    {
+                        element.xVelocity = Math.Clamp(element.xVelocity - 0.6f, -1f, 0f);
+                    }
+                    else
+                    {
+                        if (rand == 0)
+                        {
+                            if (element.xVelocity < ((LiquidElement)element).fluidPouringMin * 1)
+                            {
+                                //element.xVelocity = 0;
+                                element.xVelocity += Utilities.Simulation.GetRandomPouringValue(element) * 1;
+                            }
+                        }
+                        else if (rand == 1)
+                        {
+                            if (element.xVelocity > ((LiquidElement)element).fluidPouringMin * -1)
+                            {
+                                //element.xVelocity = 0;
+                                element.xVelocity -= Utilities.Simulation.GetRandomPouringValue(element) * 1;
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    element.xVelocity /= 0.5f;
+                }
+
+                UpdateElementVelocity(position, element);
+                UpdateElementFriction(position, element);
+            }
         }
 
         public static void UpdateElementVelocity(Point elementKey, SandbxElement elementDef)
@@ -357,6 +410,13 @@ namespace sandbx
             else
             {
                 //elementDef.yVelocity = 0;
+            }
+        }
+
+        public static void UpdateElementFriction(Point elementKey, SandbxElement elementDef)
+        {
+            if (!elementDef.isFalling)
+            {
                 elementDef.xVelocity *= elementDef.friction;
             }
         }
