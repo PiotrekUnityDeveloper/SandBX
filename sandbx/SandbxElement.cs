@@ -26,6 +26,7 @@ namespace sandbx
         public float friction { get; set; }
         public float bounciness { get; set; }
         public float energyConsumption { get; set; }
+        public bool transferVelocity { get; set; }
 
         // Behaviour
         public ElementType elementType { get; set; }
@@ -34,6 +35,7 @@ namespace sandbx
         public SandbxElement()
         {
             bounciness = 2.0f;
+            transferVelocity = true;
             energyConsumption = 0.2f;
             friction = 0.2f;
             xVelocity = 0;
@@ -57,7 +59,8 @@ namespace sandbx
                 yVelocity = this.yVelocity,
                 friction = this.friction,
                 bounciness = this.bounciness,
-                isFalling = this.isFalling
+                isFalling = this.isFalling,
+                transferVelocity = this.transferVelocity,
             };
         }
 
@@ -70,8 +73,13 @@ namespace sandbx
 
     public class PowderElement : SandbxElement
     {
+        public float powderityMin { get; set; }
+        public float powderityMax { get; set; }
+
         public PowderElement()
         {
+            powderityMin = 0;
+            powderityMax = 0;
             elementType = ElementType.Powder;
             energyConsumption = 0.1f;
             bounciness = 2.0f;
@@ -106,13 +114,15 @@ namespace sandbx
     {
         public float fluidFriction { get; set; }
         public float fluidDensity { get; set; }
-        public int fluidPouring { get; set; }
+        public float fluidPouringMin { get; set; }
+        public float fluidPouringMax { get; set; }
         public float fluidViscosity { get; set; }
 
         public LiquidElement()
         {
             elementType = ElementType.Liquid;
-            fluidPouring = 3;
+            fluidPouringMax = 3f;
+            fluidPouringMin = 0.5f;
             energyConsumption = 0.1f;
             bounciness = 2.0f;
             friction = 0.5f;
@@ -143,7 +153,7 @@ namespace sandbx
                 fluidDensity = this.fluidDensity,
                 fluidFriction = this.fluidFriction,
                 fluidViscosity = this.fluidViscosity,
-                fluidPouring = this.fluidPouring,
+                fluidPouringMax = this.fluidPouringMax,
             };
         }
     }
